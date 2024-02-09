@@ -1,11 +1,11 @@
 import unittest
 import hashlib
 import os
-from hashtools import HashTools
+from integrity import inTegrity
 
 class HashToolsTests(unittest.TestCase):
     def setUp(self):
-        self.ht = HashTools()
+        self.ht = inTegrity()
         self.directory = './tests/test_files/'
 
     def test_hash_file(self):

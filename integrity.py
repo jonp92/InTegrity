@@ -1,6 +1,6 @@
 import hashlib
 
-class HashTools:
+class inTegrity:
     """
     A class to hash files and compare hashes.
     
