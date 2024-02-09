@@ -27,11 +27,15 @@ class HashToolsTests(unittest.TestCase):
         with open(expected_path, 'r') as file:
             saved_hash = file.read()
         self.assertEqual(saved_hash, hash_value)
+        os.remove(expected_path)
+        self.assertFalse(os.path.exists(expected_path))
 
 
     def test_load_hash(self):
         filename = 'test_hash.txt.sha256'
+        save_hash_filename = 'test_hash.txt'
         expected_hash = 'abcdef1234567890'
+        self.ht.save_hash(save_hash_filename, expected_hash)
         result = self.ht.load_hash(filename)
         self.assertEqual(result, expected_hash)
         os.remove(filename)
