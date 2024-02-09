@@ -40,5 +40,5 @@ are_same = hasher.compare_hashes(hash_value, loaded_hash)
 # Compare two files
 are_same = hasher.compare_files('path_to_file1', 'path_to_file2')
 
-# Available Algorithms
+## Available Algorithms
 The available algorithms are those provided by the hashlib module and guaranteed to be available on all platforms. The default algorithm is 'sha256'.
