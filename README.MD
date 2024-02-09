@@ -25,6 +25,9 @@ from integrity import inTegrity
 # Create an instance of the inTegrity class
 hasher = inTegrity('sha256')
 
+# List available hash algorithms
+print(hasher.available_algorithms)
+
 # Hash a file
 hash_value = hasher.hash_file('path_to_your_file')
 
